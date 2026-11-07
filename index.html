@@ -131,7 +131,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-brand-gold to-brand-red flex items-center justify-center text-white font-bold text-xl shadow-lg transform group-hover:rotate-6 transition-transform duration-300">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-brand-gold to-brand-red flex items-center justify-center text-white font-bold text-xl shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
                         <i class="fa-solid fa-utensils"></i>
                     </div>
                     <div>
@@ -188,7 +188,7 @@
                         From the rich acidity of slow-simmered Adobo to the crisp golden crunch of roasted Lechon, explore an immersive portfolio of the Philippines' most celebrated culinary creations.
                     </p>
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#signature" class="px-8 py-4 rounded-full bg-brand-gold text-brand-darkred font-bold hover:bg-yellow-400 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02]">
+                        <a href="#signature" class="px-8 py-4 rounded-full bg-brand-gold text-brand-darkred font-bold hover:bg-yellow-400 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                             <span>Explore Signature Dishes</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -206,7 +206,7 @@
                         
                         <div class="relative bg-brand-darkred/80 border border-brand-gold/30 backdrop-blur-xl rounded-3xl p-6 shadow-2xl overflow-hidden shimmer-on-hover">
                             <div class="relative h-72 sm:h-80 rounded-2xl overflow-hidden mb-6 group">
-                                <img id="hero-dish-img" src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=800&q=80" alt="Featured Dish" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <img id="hero-dish-img" src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=800&q=80" alt="Featured Dish" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                                 <div class="absolute top-4 right-4 bg-brand-darkred/90 text-brand-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-gold/40">
                                     Chef Choice
                                 </div>
@@ -250,8 +250,8 @@
                 <!-- Collage / Visual -->
                 <div class="relative reveal">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Filipino Feast Gathering" class="rounded-2xl shadow-lg object-cover h-72 w-full float-slow">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Cooking Spices & Herbs" class="rounded-2xl shadow-lg object-cover h-72 w-full mt-8 float-slow">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Filipino Feast Gathering" class="rounded-2xl shadow-lg object-cover h-64 sm:h-80 w-full">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Cooking Spices & Herbs" class="rounded-2xl shadow-lg object-cover h-64 sm:h-80 w-full mt-8">
                     </div>
                     <!-- Stats Badge -->
                     <div class="absolute -bottom-6 -right-2 sm:right-6 bg-brand-terracotta text-white p-6 rounded-2xl shadow-xl max-w-xs border-2 border-brand-cream glow-pulse">
@@ -267,10 +267,10 @@
                         The Soul of the Filipino Kitchen: <span class="italic font-normal">Salo-Salo</span>
                     </h2>
                     <p class="text-brand-charcoal/80 leading-relaxed">
-                        Filipino cuisine is a vibrant tapestry defined by its balance of sweet, sour, salty, and savory notes. Deeply rooted in communal warmth and family gatherings, every dish is meant to be shared and savored together.
+                        Filipino cuisine is a vibrant tapestry defined by its balance of sweet, sour, salty, and savory notes. Deeply rooted in communal warmth and family gatherings, every dish is meant to be shared, enjoyed slowly, and remembered lovingly.
                     </p>
                     <p class="text-brand-charcoal/80 leading-relaxed">
-                        Our portfolio showcases culinary craft through authentic technique—emphasizing fermentation, souring agents like tamarind and calamansi, fragrant coconut milk, and open-flame grilling that celebrates regional identity.
+                        Our portfolio showcases culinary craft through authentic technique—emphasizing fermentation, souring agents like tamarind and calamansi, fragrant coconut milk, and open-flame grilling methods passed down through generations.
                     </p>
 
                     <!-- Feature Pills -->
@@ -328,16 +328,16 @@
 
                 <!-- Category Filters -->
                 <div class="flex flex-wrap gap-2" id="gallery-filters">
-                    <button onclick="filterGallery('all')" class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-semibold transition-all bg-brand-darkred text-white shadow">
+                    <button onclick="filterGallery('all', event)" class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-semibold transition-all bg-brand-darkred text-white shadow">
                         All Dishes
                     </button>
-                    <button onclick="filterGallery('main')" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
+                    <button onclick="filterGallery('main', event)" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
                         Mains
                     </button>
-                    <button onclick="filterGallery('street')" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
+                    <button onclick="filterGallery('street', event)" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
                         Street Food
                     </button>
-                    <button onclick="filterGallery('dessert')" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
+                    <button onclick="filterGallery('dessert', event)" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
                         Desserts
                     </button>
                 </div>
@@ -510,11 +510,11 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
                                 <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Your Name</label>
-                                <input type="text" required placeholder="e.g. Maria Santos" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none transition-all">
+                                <input type="text" required placeholder="e.g. Maria Santos" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Email Address</label>
-                                <input type="email" required placeholder="maria@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none transition-all">
+                                <input type="email" required placeholder="maria@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none transition">
                             </div>
                         </div>
 
@@ -532,7 +532,7 @@
 
                         <div>
                             <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Your Message or Recipe Feedback</label>
-                            <textarea rows="4" required placeholder="Tell us which dish you loved or ask about collaboration details..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none transition-all"></textarea>
+                            <textarea rows="4" required placeholder="Tell us which dish you loved or ask about collaboration details..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none transition"></textarea>
                         </div>
 
                         <button type="submit" class="w-full py-4 rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
@@ -672,7 +672,7 @@
                 category: "main",
                 region: "Tagalog Region",
                 shortDesc: "Comforting sour broth stewed with tender pork rib, tamarind, radish, and fresh leafy kangkong.",
-                longDesc: "Sinigang is the quintessential comforting sour soup of the Philippines. Made with a base of naturally sour tamarind fruit (sampalok) or calamansi, it features tender pork cuts, vegetables, and a deeply savory broth that warms the soul.",
+                longDesc: "Sinigang is the quintessential comforting sour soup of the Philippines. Made with a base of naturally sour tamarind fruit (sampalok) or calamansi, it features tender pork cuts, ripe tomatoes, and a deeply savory broth that brightens the palate.",
                 ingredients: ["Pork Belly/Ribs", "Tamarind Base", "Water Spinach (Kangkong)", "Daikon Radish", "Long Green Chili", "Tomatoes"],
                 notes: "Best served piping hot with steamy white jasmine rice on rainy afternoons.",
                 img: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80"
@@ -683,7 +683,7 @@
                 category: "main",
                 region: "Pampanga",
                 shortDesc: "Tender oxtail and tripe simmered in a velvet peanut sauce, paired with savory bagoong alamang.",
-                longDesc: "Originating from the culinary capital of Pampanga, Kare-Kare is a luxurious celebration dish. Tender beef oxtail and banana blossoms are coated in roasted peanut paste and a rich, savory broth that is finished with a side of salty shrimp paste.",
+                longDesc: "Originating from the culinary capital of Pampanga, Kare-Kare is a luxurious celebration dish. Tender beef oxtail and banana blossoms are coated in roasted peanut paste and annatto-infused broth, then served with a salty shrimp paste on the side for balance.",
                 ingredients: ["Beef Oxtail", "Peanut Butter/Paste", "Annatto Seeds", "Eggplant", "String Beans", "Shrimp Paste (Bagoong)"],
                 notes: "The dish is deliberately unsalted during cooking—the salty shrimp paste on the side creates the perfect customized bite.",
                 img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
@@ -694,7 +694,7 @@
                 category: "main",
                 region: "Bacolod, Visayas",
                 shortDesc: "Grilled chicken marinated in lemongrass, calamansi, coconut vinegar, and basted with annatto oil.",
-                longDesc: "Bacolod's world-famous chargrilled chicken. Marinated in a fragrant blend of local lemongrass, ginger, garlic, and coconut vinegar, then flame-grilled while repeatedly basted with annatto oil for that signature smoky golden finish.",
+                longDesc: "Bacolod's world-famous chargrilled chicken. Marinated in a fragrant blend of local lemongrass, ginger, garlic, and coconut vinegar, then flame-grilled while repeatedly basted with annatto oil for its signature orange-gold finish.",
                 ingredients: ["Chicken Quarters", "Lemongrass", "Calamansi Juice", "Coconut Vinegar", "Annatto Oil", "Garlic Rice"],
                 notes: "Traditionally served over garlic rice drenched in golden chicken oil with fresh calamansi soy dip.",
                 img: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80"
@@ -705,7 +705,7 @@
                 category: "dessert",
                 region: "Nationwide",
                 shortDesc: "Shaved ice layered with sweet beans, palm fruit, ube halaya, leche flan, and coconut milk.",
-                longDesc: "Meaning 'Mix-Mix', this ultimate tropical dessert combines shaved ice, evaporated milk, sweet jackfruit, sago pearls, sweetened mung beans, topped with a slice of rich leche flan and a scoop of ube ice cream.",
+                longDesc: "Meaning 'Mix-Mix', this ultimate tropical dessert combines shaved ice, evaporated milk, sweet jackfruit, sago pearls, sweetened mung beans, topped with a slice of rich leche flan and vibrant ube cream.",
                 ingredients: ["Shaved Ice", "Evaporated Milk", "Ube Ice Cream", "Leche Flan", "Sweetened Plantain", "Coconut Gel (Nata de Coco)"],
                 notes: "Mix thoroughly before eating so every spoon delivers a mix of cool textures and creamy sweetness.",
                 img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
@@ -716,7 +716,7 @@
                 category: "street",
                 region: "Angeles City, Pampanga",
                 shortDesc: "Sizzling minced pork face and liver seasoned with calamansi, chili peppers, and fresh onions.",
-                longDesc: "Invented by Lucia Cunanan of Pampanga, Sisig transforms boiled, grilled, and minced pork bits into a sizzling delicacy dressed with citrus juice, fiery chili peppers, crunchy onions, and a creamy egg on top.",
+                longDesc: "Invented by Lucia Cunanan of Pampanga, Sisig transforms boiled, grilled, and minced pork bits into a sizzling delicacy dressed with citrus juice, fiery chili peppers, crunchy onions, and a raw egg on top.",
                 ingredients: ["Minced Pork", "Calamansi", "Bird's Eye Chili", "Onions", "Chicken Liver", "Fresh Egg"],
                 notes: "The ultimate 'Pulutan' (finger food paired with cold beverages).",
                 img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
@@ -769,7 +769,7 @@
         function renderSignatureDishes() {
             const grid = document.getElementById('signature-dishes-grid');
             grid.innerHTML = signatureDishes.map(dish => `
-                <div onclick="openDishModal(${dish.id})" class="dish-card group bg-brand-softbg rounded-3xl overflow-hidden border border-brand-gold/20 hover:border-brand-gold/60 shadow-md hover:shadow-xl transition-all reveal">
+                <div onclick="openDishModal(${dish.id})" class="dish-card group bg-brand-softbg rounded-3xl overflow-hidden border border-brand-gold/20 hover:border-brand-gold/60 shadow-md hover:shadow-xl cursor-pointer">
                     <div class="relative h-56 overflow-hidden shimmer-on-hover">
                         <img src="${dish.img}" alt="${dish.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <span class="absolute top-4 left-4 bg-brand-darkred/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/30">
@@ -806,14 +806,19 @@
             `).join('');
         }
 
-        function filterGallery(cat) {
+        function filterGallery(cat, event) {
             const buttons = document.querySelectorAll('#gallery-filters button');
+            const target = event ? event.currentTarget : document.querySelector(`#gallery-filters button[data-category="${cat}"]`);
+
             buttons.forEach(btn => {
                 btn.classList.remove('bg-brand-darkred', 'text-white');
                 btn.classList.add('bg-white', 'text-brand-charcoal');
             });
-            event.target.classList.remove('bg-white', 'text-brand-charcoal');
-            event.target.classList.add('bg-brand-darkred', 'text-white');
+
+            if (target) {
+                target.classList.remove('bg-white', 'text-brand-charcoal');
+                target.classList.add('bg-brand-darkred', 'text-white');
+            }
 
             renderGallery(cat);
         }
