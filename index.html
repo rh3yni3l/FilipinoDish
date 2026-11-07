@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor Filipinas - Filipino Culinary Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#B91C1C',
+                            darkred: '#7F1D1D',
+                            gold: '#F59E0B',
+                            amber: '#D97706',
+                            terracotta: '#C2410C',
+                            cream: '#FEF3C7',
+                            softbg: '#FFFBEB',
+                            charcoal: '#1F2937'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(127, 29, 29, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .hero-pattern {
+            background-color: #7f1d1d;
+            background-image: radial-gradient(#f59e0b 0.75px, transparent 0.75px), radial-gradient(#f59e0b 0.75px, #7f1d1d 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            opacity: 0.95;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FEF3C7;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D97706;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-brand-softbg text-brand-charcoal font-sans antialiased custom-scrollbar selection:bg-brand-gold selection:text-brand-darkred">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-brand-gold/20 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-brand-gold to-brand-red flex items-center justify-center text-white font-bold text-xl shadow-lg transform group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-wide block leading-none text-white">Savor<span class="text-brand-gold">Filipinas</span></span>
+                        <span class="text-[10px] tracking-widest uppercase text-brand-cream font-semibold">Culinary Portfolio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="#home" class="hover:text-brand-gold transition-colors duration-200">Home</a>
+                    <a href="#about" class="hover:text-brand-gold transition-colors duration-200">Our Story</a>
+                    <a href="#signature" class="hover:text-brand-gold transition-colors duration-200">Signature Dishes</a>
+                    <a href="#gallery" class="hover:text-brand-gold transition-colors duration-200">Food Gallery</a>
+                    <a href="#flavor-profile" class="hover:text-brand-gold transition-colors duration-200">Flavor Matrix</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-gold text-brand-darkred font-bold hover:bg-yellow-400 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl p-2 rounded-lg hover:bg-brand-darkred/50 focus:outline-none text-brand-cream">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkred/95 border-b border-brand-gold/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-brand-red transition-colors">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-brand-red transition-colors">Our Story</a>
+            <a href="#signature" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-brand-red transition-colors">Signature Dishes</a>
+            <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-brand-red transition-colors">Food Gallery</a>
+            <a href="#flavor-profile" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-brand-red transition-colors">Flavor Matrix</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md bg-brand-gold text-brand-darkred font-bold text-center">Get In Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-28 pb-20 md:pt-36 md:pb-32 hero-pattern text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-brand-gold/40 text-brand-cream text-sm font-semibold">
+                        <i class="fa-solid fa-pepper-hot text-brand-gold animate-bounce"></i>
+                        <span>A Tapestry of Bold Flavors & Traditions</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-white">
+                        Celebrating the Art of <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-300 to-amber-200">Filipino Heritage</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-brand-cream/90 max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+                        From the rich acidity of slow-simmered Adobo to the crisp golden crunch of roasted Lechon, explore an immersive portfolio of the Philippines' most celebrated culinary creations.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#signature" class="px-8 py-4 rounded-full bg-brand-gold text-brand-darkred font-bold hover:bg-yellow-400 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center gap-3">
+                            <span>Explore Signature Dishes</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-md border border-white/20 transition-all">
+                            Cultural Story
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Highlight Dish Carousel/Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Glow effect -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-gold to-brand-terracotta opacity-40 blur-xl"></div>
+                        
+                        <div class="relative bg-brand-darkred/80 border border-brand-gold/30 backdrop-blur-xl rounded-3xl p-6 shadow-2xl overflow-hidden">
+                            <div class="relative h-72 sm:h-80 rounded-2xl overflow-hidden mb-6 group">
+                                <img id="hero-dish-img" src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=800&q=80" alt="Featured Dish" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 right-4 bg-brand-darkred/90 text-brand-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-gold/40">
+                                    Chef Choice
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 id="hero-dish-title" class="font-serif text-2xl font-bold text-white">Classic Pork Adobo</h3>
+                                    <span id="hero-dish-region" class="text-xs px-2.5 py-1 rounded bg-brand-gold/20 text-brand-cream border border-brand-gold/30">Luzon</span>
+                                </div>
+                                <p id="hero-dish-desc" class="text-brand-cream/80 text-sm leading-relaxed mb-4">
+                                    Pork braised slowly in vinegar, soy sauce, garlic, black peppercorns, and bay leaves until fork-tender with rich glaze.
+                                </p>
+                                <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                                    <div class="flex items-center gap-1 text-brand-gold">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="text-xs text-white/80 ml-2">(4.9/5 Signature Rating)</span>
+                                    </div>
+                                    <button onclick="cycleHeroDish()" class="text-xs font-semibold text-brand-gold hover:text-white flex items-center gap-1">
+                                        <span>Next Spotlight</span>
+                                        <i class="fa-solid fa-rotate"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Story / About Section -->
+    <section id="about" class="py-20 bg-brand-softbg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Collage / Visual -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Filipino Feast Gathering" class="rounded-2xl shadow-lg object-cover h-64 w-full hover:scale-[1.02] transition-transform">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Cooking Spices & Herbs" class="rounded-2xl shadow-lg object-cover h-64 w-full mt-8 hover:scale-[1.02] transition-transform">
+                    </div>
+                    <!-- Stats Badge -->
+                    <div class="absolute -bottom-6 -right-2 sm:right-6 bg-brand-terracotta text-white p-6 rounded-2xl shadow-xl max-w-xs border-2 border-brand-cream">
+                        <p class="font-serif text-3xl font-bold text-brand-cream">7,641</p>
+                        <p class="text-xs text-white/90 font-medium">Islands of unique flavor profiles, inherited recipes, & regional cooking traditions.</p>
+                    </div>
+                </div>
+
+                <!-- Story Text -->
+                <div class="space-y-6">
+                    <span class="text-brand-terracotta uppercase font-bold text-sm tracking-widest">Heritage & Passion</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-brand-darkred leading-tight">
+                        The Soul of the Filipino Kitchen: <span class="italic font-normal">Salo-Salo</span>
+                    </h2>
+                    <p class="text-brand-charcoal/80 leading-relaxed">
+                        Filipino cuisine is a vibrant tapestry defined by its balance of sweet, sour, salty, and savory notes. Deeply rooted in communal warmth and family gatherings (<span class="italic font-semibold">Salo-Salo</span>), every dish tells a historical journey of indigenous roots mixed with Malayo-Polynesian, Spanish, Chinese, and American influences.
+                    </p>
+                    <p class="text-brand-charcoal/80 leading-relaxed">
+                        Our portfolio showcases culinary craft through authentic technique—emphasizing fermentation, souring agents like tamarind and calamansi, fragrant coconut milk, and open-flame roasting.
+                    </p>
+
+                    <!-- Feature Pills -->
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-white border border-brand-gold/30 shadow-sm flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-cream flex items-center justify-center text-brand-terracotta shrink-0">
+                                <i class="fa-solid fa-lemon text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-darkred text-sm">Asim & Alat</h4>
+                                <p class="text-xs text-brand-charcoal/70">Masterful balance of acidity and saltiness.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white border border-brand-gold/30 shadow-sm flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-cream flex items-center justify-center text-brand-terracotta shrink-0">
+                                <i class="fa-solid fa-fire text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-darkred text-sm">Open Flame</h4>
+                                <p class="text-xs text-brand-charcoal/70">Charred smoky flavors & slow-roasted meats.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Signature Dishes Section -->
+    <section id="signature" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-brand-terracotta uppercase font-bold text-sm tracking-widest">Culinary Highlights</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-extrabold text-brand-darkred">Signature Classics</h2>
+                <p class="text-brand-charcoal/70">Click on any dish card to open its detailed flavor profile, ingredient matrix, and preparation story.</p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="signature-dishes-grid">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Gallery with Category Filter -->
+    <section id="gallery" class="py-20 bg-brand-softbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-brand-terracotta uppercase font-bold text-sm tracking-widest">Visual Feast</span>
+                    <h2 class="font-serif text-4xl font-extrabold text-brand-darkred">Food Gallery</h2>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2" id="gallery-filters">
+                    <button onclick="filterGallery('all')" class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-semibold transition-all bg-brand-darkred text-white shadow">
+                        All Dishes
+                    </button>
+                    <button onclick="filterGallery('main')" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
+                        Mains
+                    </button>
+                    <button onclick="filterGallery('street')" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
+                        Street Food
+                    </button>
+                    <button onclick="filterGallery('dessert')" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-cream shadow-sm">
+                        Desserts
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="gallery-grid">
+                <!-- Gallery items injected dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Flavor Matrix / Rating Section -->
+    <section id="flavor-profile" class="py-20 bg-brand-darkred text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-gold uppercase font-bold text-sm tracking-widest">Interactive Flavor Meter</span>
+                    <h2 class="font-serif text-4xl font-extrabold leading-tight">Taste Profile Explorer</h2>
+                    <p class="text-brand-cream/80 text-sm leading-relaxed">
+                        Filipino food is renowned for bold, distinct flavor combinations. Choose a flavor craving to discover how our signature dishes map onto key taste dimensions.
+                    </p>
+
+                    <!-- Buttons to set target profile -->
+                    <div class="space-y-3 pt-2">
+                        <button onclick="selectProfile('sour')" class="w-full text-left p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-brand-gold/30 transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-yellow-400 text-brand-darkred font-bold flex items-center justify-center text-xs">01</span>
+                                <span class="font-semibold text-white">Tangy & Souring (Asim)</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-brand-gold group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+
+                        <button onclick="selectProfile('savory')" class="w-full text-left p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-brand-gold/30 transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-brand-gold text-brand-darkred font-bold flex items-center justify-center text-xs">02</span>
+                                <span class="font-semibold text-white">Savory Umami (Linamnam)</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-brand-gold group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+
+                        <button onclick="selectProfile('sweet')" class="w-full text-left p-4 rounded-xl bg-white/10 hover:bg-white/20 border border-brand-gold/30 transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-orange-400 text-brand-darkred font-bold flex items-center justify-center text-xs">03</span>
+                                <span class="font-semibold text-white">Sweet & Coconut (Tamis & Gata)</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-brand-gold group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Meter Display -->
+                <div class="lg:col-span-7 bg-brand-charcoal/40 border border-brand-gold/20 p-8 rounded-3xl backdrop-blur-md">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 id="profile-title" class="font-serif text-2xl font-bold text-brand-cream">Tangy & Souring (Asim)</h3>
+                        <span id="profile-match" class="px-3 py-1 bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-xs font-bold rounded-full">Sinigang Match</span>
+                    </div>
+
+                    <!-- Progress Bars -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="uppercase tracking-wider text-brand-cream/80">Sourness (Asim)</span>
+                                <span id="bar-sour-val" class="text-brand-gold">95%</span>
+                            </div>
+                            <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                                <div id="bar-sour" class="h-full bg-gradient-to-r from-yellow-400 to-brand-gold rounded-full transition-all duration-700" style="width: 95%;"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="uppercase tracking-wider text-brand-cream/80">Savory (Linamnam)</span>
+                                <span id="bar-savory-val" class="text-brand-gold">85%</span>
+                            </div>
+                            <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                                <div id="bar-savory" class="h-full bg-gradient-to-r from-orange-400 to-brand-terracotta rounded-full transition-all duration-700" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="uppercase tracking-wider text-brand-cream/80">Sweetness (Tamis)</span>
+                                <span id="bar-sweet-val" class="text-brand-gold">15%</span>
+                            </div>
+                            <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                                <div id="bar-sweet" class="h-full bg-gradient-to-r from-pink-400 to-purple-400 rounded-full transition-all duration-700" style="width: 15%;"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="uppercase tracking-wider text-brand-cream/80">Aroma & Spice (Bango)</span>
+                                <span id="bar-spice-val" class="text-brand-gold">70%</span>
+                            </div>
+                            <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+                                <div id="bar-spice" class="h-full bg-gradient-to-r from-red-400 to-brand-red rounded-full transition-all duration-700" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-brand-darkred/60 rounded-xl border border-brand-gold/30">
+                        <p id="profile-recommendation" class="text-xs text-brand-cream/90 italic">
+                            "Featured Match: Sinigang na Baboy — Tamarind broth loaded with kangkong, radish, and tender pork belly delivers the ultimate refreshing sour-savory punch."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback & Contact Section -->
+    <section id="contact" class="py-20 bg-brand-softbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-terracotta uppercase font-bold text-sm tracking-widest">Connect With Us</span>
+                    <h2 class="font-serif text-4xl font-extrabold text-brand-darkred">Let’s Celebrate Culinary Art</h2>
+                    <p class="text-brand-charcoal/80 leading-relaxed">
+                        Interested in culinary collaborations, catering portfolios, private pop-up dinners, or heritage food workshops? Drop us a message below.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-cream text-brand-terracotta flex items-center justify-center font-bold text-xl shadow-sm">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-darkred text-sm">Culinary Studio</h4>
+                                <p class="text-xs text-brand-charcoal/70">Metro Manila, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-cream text-brand-terracotta flex items-center justify-center font-bold text-xl shadow-sm">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-darkred text-sm">Email Inquiries</h4>
+                                <p class="text-xs text-brand-charcoal/70">hello@savorfilipinas.portfolio</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-cream text-brand-terracotta flex items-center justify-center font-bold text-xl shadow-sm">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-darkred text-sm">Social Channels</h4>
+                                <div class="flex gap-3 mt-1">
+                                    <a href="#" class="text-brand-terracotta hover:text-brand-darkred text-base"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#" class="text-brand-terracotta hover:text-brand-darkred text-base"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="#" class="text-brand-terracotta hover:text-brand-darkred text-base"><i class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form Column -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-brand-gold/30">
+                    <h3 class="font-serif text-2xl font-bold text-brand-darkred mb-2">Send Feedback or Inquiry</h3>
+                    <p class="text-xs text-brand-charcoal/70 mb-6">Rate your favorite dish and share your thoughts with our culinary team.</p>
+
+                    <form id="portfolio-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" required placeholder="e.g. Maria Santos" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none text-sm bg-brand-softbg/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Email Address</label>
+                                <input type="email" required placeholder="maria@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none text-sm bg-brand-softbg/50">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Favorite Dish Rating</label>
+                            <div class="flex items-center gap-2 text-2xl text-gray-300" id="star-rating">
+                                <i class="fa-solid fa-star cursor-pointer hover:text-brand-gold transition-colors" onclick="setRating(1)"></i>
+                                <i class="fa-solid fa-star cursor-pointer hover:text-brand-gold transition-colors" onclick="setRating(2)"></i>
+                                <i class="fa-solid fa-star cursor-pointer hover:text-brand-gold transition-colors" onclick="setRating(3)"></i>
+                                <i class="fa-solid fa-star cursor-pointer hover:text-brand-gold transition-colors" onclick="setRating(4)"></i>
+                                <i class="fa-solid fa-star cursor-pointer hover:text-brand-gold transition-colors" onclick="setRating(5)"></i>
+                                <span id="rating-text" class="text-xs text-brand-charcoal/60 font-semibold ml-2">Tap stars to rate</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Your Message or Recipe Feedback</label>
+                            <textarea rows="4" required placeholder="Tell us which dish you loved or ask about collaboration details..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold focus:outline-none text-sm bg-brand-softbg/50"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-brand-red hover:bg-brand-darkred text-white font-bold transition-all shadow-lg hover:shadow-xl">
+                            Submit Feedback
+                        </button>
+                    </form>
+
+                    <!-- Success Message Container -->
+                    <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-sm font-medium flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-green-600 text-xl"></i>
+                        <span>Salamat! Your message and feedback have been received successfully.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darkred text-white border-t border-brand-gold/30 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-2 font-serif text-2xl font-bold">
+                <i class="fa-solid fa-utensils text-brand-gold"></i>
+                <span>Savor<span class="text-brand-gold">Filipinas</span></span>
+            </div>
+            <p class="text-xs text-brand-cream/70 max-w-md mx-auto">
+                Promoting, preserving, and reimagining authentic Filipino food traditions for global appreciation.
+            </p>
+            <p class="text-xs text-brand-cream/50">
+                &copy; 2026 Savor Filipinas Portfolio. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Ingredient & Recipe Detail Modal -->
+    <div id="dish-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border border-brand-gold/40 relative">
+            
+            <!-- Close Button -->
+            <button onclick="closeDishModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Modal Header Image -->
+            <div class="relative h-64 sm:h-72 w-full">
+                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span id="modal-region" class="px-3 py-1 rounded-full bg-brand-gold text-brand-darkred text-xs font-bold uppercase tracking-wider mb-2 inline-block">Region</span>
+                    <h2 id="modal-title" class="font-serif text-3xl font-bold text-white">Dish Title</h2>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 sm:p-8 space-y-6 text-brand-charcoal">
+                <div>
+                    <h4 class="text-xs font-bold text-brand-terracotta uppercase tracking-wider mb-2">Description</h4>
+                    <p id="modal-desc" class="text-sm leading-relaxed text-gray-700">Detailed dish description goes here.</p>
+                </div>
+
+                <!-- Key Ingredients Pills -->
+                <div>
+                    <h4 class="text-xs font-bold text-brand-terracotta uppercase tracking-wider mb-2">Key Ingredients</h4>
+                    <div id="modal-ingredients" class="flex flex-wrap gap-2">
+                        <!-- Dynamic Pills -->
+                    </div>
+                </div>
+
+                <!-- Flavor Breakdown -->
+                <div class="p-4 rounded-2xl bg-brand-softbg border border-brand-gold/30">
+                    <h4 class="text-xs font-bold text-brand-darkred uppercase tracking-wider mb-2">Culinary Notes</h4>
+                    <p id="modal-notes" class="text-xs text-gray-600 leading-relaxed">Cooking notes and traditional serving styles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Data & Interactivity -->
+    <script>
+        // Hero Carousel Data
+        const heroDishes = [
+            {
+                title: "Classic Pork Adobo",
+                region: "Luzon / Nationwide",
+                desc: "Pork braised slowly in vinegar, soy sauce, garlic, black peppercorns, and bay leaves until fork-tender with rich glaze.",
+                img: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                title: "Crispy Lechon Belly",
+                region: "Cebu / Visayas",
+                desc: "Succulent pork roasted over charcoal with lemongrass, garlic, and scallions under an ultra-crispy golden skin.",
+                img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                title: "Kare-Kare Stew",
+                region: "Pampanga",
+                desc: "Rich oxtail and vegetable stew thickened with creamy peanut sauce, served with savory fermented shrimp paste (bagoong).",
+                img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+        let heroIndex = 0;
+
+        function cycleHeroDish() {
+            heroIndex = (heroIndex + 1) % heroDishes.length;
+            const dish = heroDishes[heroIndex];
+            document.getElementById('hero-dish-title').innerText = dish.title;
+            document.getElementById('hero-dish-region').innerText = dish.region;
+            document.getElementById('hero-dish-desc').innerText = dish.desc;
+            document.getElementById('hero-dish-img').src = dish.img;
+        }
+
+        // Signature Dishes Database
+        const signatureDishes = [
+            {
+                id: 1,
+                title: "Sinigang na Baboy",
+                category: "main",
+                region: "Tagalog Region",
+                shortDesc: "Comforting sour broth stewed with tender pork rib, tamarind, radish, and fresh leafy kangkong.",
+                longDesc: "Sinigang is the quintessential comforting sour soup of the Philippines. Made with a base of naturally sour tamarind fruit (sampalok) or calamansi, it features tender pork cutlets simmered alongside daikon radish, eggplant, long green chilies, and water spinach.",
+                ingredients: ["Pork Belly/Ribs", "Tamarind Base", "Water Spinach (Kangkong)", "Daikon Radish", "Long Green Chili", "Tomatoes"],
+                notes: "Best served piping hot with steamy white jasmine rice on rainy afternoons.",
+                img: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 2,
+                title: "Pampanga Kare-Kare",
+                category: "main",
+                region: "Pampanga",
+                shortDesc: "Tender oxtail and tripe simmered in a velvet peanut sauce, paired with savory bagoong alamang.",
+                longDesc: "Originating from the culinary capital of Pampanga, Kare-Kare is a luxurious celebration dish. Tender beef oxtail and banana blossoms are coated in roasted peanut paste and annatto seed broth for a rich golden color.",
+                ingredients: ["Beef Oxtail", "Peanut Butter/Paste", "Annatto Seeds", "Eggplant", "String Beans", "Shrimp Paste (Bagoong)"],
+                notes: "The dish is deliberately unsalted during cooking—the salty shrimp paste on the side creates the perfect customized bite.",
+                img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 3,
+                title: "Chicken Inasal",
+                category: "main",
+                region: "Bacolod, Visayas",
+                shortDesc: "Grilled chicken marinated in lemongrass, calamansi, coconut vinegar, and basted with annatto oil.",
+                longDesc: "Bacolod's world-famous chargrilled chicken. Marinated in a fragrant blend of local lemongrass, ginger, garlic, and coconut vinegar, then flame-grilled while repeatedly basted with golden chicken-annatto oil.",
+                ingredients: ["Chicken Quarters", "Lemongrass", "Calamansi Juice", "Coconut Vinegar", "Annatto Oil", "Garlic Rice"],
+                notes: "Traditionally served over garlic rice drenched in golden chicken oil with fresh calamansi soy dip.",
+                img: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 4,
+                title: "Halo-Halo Special",
+                category: "dessert",
+                region: "Nationwide",
+                shortDesc: "Shaved ice layered with sweet beans, palm fruit, ube halaya, leche flan, and coconut milk.",
+                longDesc: "Meaning 'Mix-Mix', this ultimate tropical dessert combines shaved ice, evaporated milk, sweet jackfruit, sago pearls, sweetened mung beans, topped with a slice of rich leche flan and purple yam (ube) ice cream.",
+                ingredients: ["Shaved Ice", "Evaporated Milk", "Ube Ice Cream", "Leche Flan", "Sweetened Plantain", "Coconut Gel (Nata de Coco)"],
+                notes: "Mix thoroughly before eating so every spoon delivers a mix of cool textures and creamy sweetness.",
+                img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 5,
+                title: "Crispy Pork Sisig",
+                category: "street",
+                region: "Angeles City, Pampanga",
+                shortDesc: "Sizzling minced pork face and liver seasoned with calamansi, chili peppers, and fresh onions.",
+                longDesc: "Invented by Lucia Cunanan of Pampanga, Sisig transforms boiled, grilled, and minced pork bits into a sizzling delicacy dressed with citrus juice, fiery chili peppers, crunchy onions, and a raw egg cooked by the sizzling plate.",
+                ingredients: ["Minced Pork", "Calamansi", "Bird's Eye Chili", "Onions", "Chicken Liver", "Fresh Egg"],
+                notes: "The ultimate 'Pulutan' (finger food paired with cold beverages).",
+                img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 6,
+                title: "Leche Flan",
+                category: "dessert",
+                region: "Spanish Influence",
+                shortDesc: "Silky steamed egg yolk custard with a golden liquid caramel top layer.",
+                longDesc: "A staple at every celebration. Made primarily from egg yolks and condensed milk, cooked gently until dense and velvety, coated with a luscious burnt-sugar caramel glaze.",
+                ingredients: ["Egg Yolks", "Condensed Milk", "Evaporated Milk", "Caramelized Sugar", "Vanilla Extract"],
+                notes: "Rich and ultra-smooth—a little slice goes a long way.",
+                img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // Gallery Items Data
+        const galleryItems = [
+            { title: "Kinilaw na Tanigue", cat: "main", img: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" },
+            { title: "Pork BBQ Skewers", cat: "street", img: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=600&q=80" },
+            { title: "Ube Crinkle Cookies", cat: "dessert", img: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" },
+            { title: "Bicol Express", cat: "main", img: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=600&q=80" },
+            { title: "Kwek-Kwek Street Eggs", cat: "street", img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" },
+            { title: "Bibingka Rice Cake", cat: "dessert", img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" },
+            { title: "Crispy Pata", cat: "main", img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" },
+            { title: "Turon Banana Rolls", cat: "street", img: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" }
+        ];
+
+        // Dynamic Flavor Matrix Profiles
+        const flavorProfiles = {
+            sour: {
+                title: "Tangy & Souring (Asim)",
+                match: "Sinigang Match",
+                sour: 95, savory: 85, sweet: 15, spice: 70,
+                recommendation: "Featured Match: Sinigang na Baboy — Tamarind broth loaded with kangkong, radish, and tender pork belly delivers the ultimate refreshing sour-savory punch."
+            },
+            savory: {
+                title: "Savory Umami (Linamnam)",
+                match: "Kare-Kare & Sisig Match",
+                sour: 30, savory: 98, sweet: 25, spice: 60,
+                recommendation: "Featured Match: Pampanga Kare-Kare — Thick roasted peanut sauce coupled with savory bagoong shrimp paste creates deep, complex umami notes."
+            },
+            sweet: {
+                title: "Sweet & Coconut (Tamis & Gata)",
+                match: "Halo-Halo & Leche Flan Match",
+                sour: 10, savory: 20, sweet: 95, spice: 10,
+                recommendation: "Featured Match: Halo-Halo Special — Creamy condensed milk, sweetened jackfruit, ube halaya, and silky caramel flan."
+            }
+        };
+
+        // Render Signature Dishes
+        function renderSignatureDishes() {
+            const grid = document.getElementById('signature-dishes-grid');
+            grid.innerHTML = signatureDishes.map(dish => `
+                <div onclick="openDishModal(${dish.id})" class="group bg-brand-softbg rounded-3xl overflow-hidden border border-brand-gold/20 hover:border-brand-gold/60 shadow-md hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="${dish.img}" alt="${dish.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute top-4 left-4 bg-brand-darkred/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/30">
+                            ${dish.region}
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-serif text-2xl font-bold text-brand-darkred group-hover:text-brand-terracotta transition-colors">${dish.title}</h3>
+                        <p class="text-xs text-brand-charcoal/70 line-clamp-2 leading-relaxed">${dish.shortDesc}</p>
+                        <div class="pt-2 flex items-center justify-between text-xs font-bold text-brand-terracotta border-t border-brand-gold/20">
+                            <span>View Ingredients & Recipe</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Gallery Items
+        function renderGallery(filter = 'all') {
+            const grid = document.getElementById('gallery-grid');
+            const filtered = filter === 'all' ? galleryItems : galleryItems.filter(item => item.cat === filter);
+            
+            grid.innerHTML = filtered.map(item => `
+                <div class="group relative h-64 rounded-2xl overflow-hidden shadow-md cursor-pointer">
+                    <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-darkred/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-brand-gold bg-black/40 px-2 py-0.5 rounded border border-brand-gold/30">
+                            ${item.cat}
+                        </span>
+                        <h4 class="font-serif text-lg font-bold mt-1 text-white">${item.title}</h4>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterGallery(cat) {
+            // Update filter button styling
+            const buttons = document.querySelectorAll('#gallery-filters button');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-darkred', 'text-white');
+                btn.classList.add('bg-white', 'text-brand-charcoal');
+            });
+            event.target.classList.remove('bg-white', 'text-brand-charcoal');
+            event.target.classList.add('bg-brand-darkred', 'text-white');
+
+            renderGallery(cat);
+        }
+
+        // Modal Functions
+        function openDishModal(id) {
+            const dish = signatureDishes.find(d => d.id === id);
+            if (!dish) return;
+
+            document.getElementById('modal-title').innerText = dish.title;
+            document.getElementById('modal-region').innerText = dish.region;
+            document.getElementById('modal-img').src = dish.img;
+            document.getElementById('modal-desc').innerText = dish.longDesc;
+            document.getElementById('modal-notes').innerText = dish.notes;
+
+            const ingContainer = document.getElementById('modal-ingredients');
+            ingContainer.innerHTML = dish.ingredients.map(ing => `
+                <span class="px-3 py-1 rounded-full bg-brand-cream text-brand-darkred text-xs font-semibold border border-brand-gold/30 flex items-center gap-1.5">
+                    <i class="fa-solid fa-check text-brand-terracotta text-[10px]"></i> ${ing}
+                </span>
+            `).join('');
+
+            document.getElementById('dish-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDishModal() {
+            document.getElementById('dish-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Flavor Matrix Selector
+        function selectProfile(type) {
+            const profile = flavorProfiles[type];
+            if (!profile) return;
+
+            document.getElementById('profile-title').innerText = profile.title;
+            document.getElementById('profile-match').innerText = profile.match;
+            document.getElementById('profile-recommendation').innerText = `"${profile.recommendation}"`;
+
+            document.getElementById('bar-sour').style.width = `${profile.sour}%`;
+            document.getElementById('bar-sour-val').innerText = `${profile.sour}%`;
+
+            document.getElementById('bar-savory').style.width = `${profile.savory}%`;
+            document.getElementById('bar-savory-val').innerText = `${profile.savory}%`;
+
+            document.getElementById('bar-sweet').style.width = `${profile.sweet}%`;
+            document.getElementById('bar-sweet-val').innerText = `${profile.sweet}%`;
+
+            document.getElementById('bar-spice').style.width = `${profile.spice}%`;
+            document.getElementById('bar-spice-val').innerText = `${profile.spice}%`;
+        }
+
+        // Interactive Rating Star System
+        let currentRating = 0;
+        function setRating(rating) {
+            currentRating = rating;
+            const stars = document.querySelectorAll('#star-rating i');
+            stars.forEach((star, idx) => {
+                if (idx < rating) {
+                    star.classList.remove('text-gray-300');
+                    star.classList.add('text-brand-gold');
+                } else {
+                    star.classList.remove('text-brand-gold');
+                    star.classList.add('text-gray-300');
+                }
+            });
+            document.getElementById('rating-text').innerText = `${rating} out of 5 Stars`;
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('form-success');
+            successBox.classList.remove('hidden');
+            document.getElementById('portfolio-form').reset();
+            setRating(0);
+            document.getElementById('rating-text').innerText = 'Tap stars to rate';
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 4000);
+        }
+
+        // Mobile Nav Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize Page Data
+        window.onload = function() {
+            renderSignatureDishes();
+            renderGallery('all');
+        };
+    </script>
+</body>
+</html>
